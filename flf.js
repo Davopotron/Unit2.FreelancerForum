@@ -32,7 +32,7 @@ const freelancers = [
   freelancers.push({ name, occupation, price });
 }
 
-function updateAveragePrice(state) {
+function updategetAvr(state) {
     const total = freelancers.reduce(
       (acc, freelancer) => acc + freelancer.price,
       0
@@ -66,23 +66,23 @@ const $tbody = document.querySelector(".freelancers tbody");
 $tbody.replaceChildren(...$freelancers);
 
 
-function renderAveragePrice() {
+function renderget() {
 const $price = document.querySelector(".average_price");
 $price.textContent = `$${averagePrice.toFixed(2)}`;
 }
 
 function render() {
 renderFreelancers();
-renderAveragePrice();
+rendergetAvr();
 }
 
 
-updateAveragePrice();
+updategetAvr();
 render();
 
 const freelancerInterval = setInterval(function () {
 addFreelancer();
-updateAveragePrice();
+updategetAvr();
 render();
 
 if (freelancers.length >= MAX_FREELANCERS) {
