@@ -40,6 +40,8 @@ function updateAveragePrice(state) {
     averagePrice = total / freelancers.length;
   }
 
+  
+
 function renderFreelancers() {
     const $$freelancers = freelancers.map => {;
         const $$tr = document.createElement("tr");
